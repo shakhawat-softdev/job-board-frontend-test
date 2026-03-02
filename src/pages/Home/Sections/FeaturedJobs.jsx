@@ -10,7 +10,9 @@ import { jobs } from "../../../data/jobs";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const featuredJobs = jobs.filter((job) => job.isFeatured);
+const featuredJobs = [...jobs]
+  .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
+  .slice(0, 4);
 
 const FeaturedJobs = () => {
   const sectionRef = useRef();

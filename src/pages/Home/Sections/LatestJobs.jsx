@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { jobs } from "../../../data/jobs";
 
 const LatestJobs = () => {
-  const latestJobs = jobs.filter((job) => job.isLatest);
+  const latestJobs = [...jobs]
+    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+    .slice(0, 8);
 
   return (
     <section className="py-24 bg-white">
@@ -52,8 +54,8 @@ const LatestJobs = () => {
                     <span
                       key={idx}
                       className={`px-4 py-1 text-[13px] font-semibold border ${tag === "Full-Time" ? "bg-emerald-50 text-emerald-500 border-emerald-100" :
-                          tag === "Marketing" ? "bg-orange-50 text-orange-500 border-orange-100" :
-                            "bg-white text-[#4F46E5] border-indigo-500"
+                        tag === "Marketing" ? "bg-orange-50 text-orange-500 border-orange-100" :
+                          "bg-white text-[#4F46E5] border-indigo-500"
                         }`}
                       style={{ borderRadius: "100px" }}
                     >

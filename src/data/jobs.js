@@ -9,8 +9,7 @@ export const jobs = [
     tags: ["Marketing", "Design"],
     description:
       "As an Email Marketing specialist, you will plan and execute campaigns that reach millions of users. You will collaborate with design and product teams to produce engaging content, optimize open and click-through rates, and drive measurable growth through experimentation and segmentation.",
-    isFeatured: true,
-    isLatest: false,
+    created_at: "2026-01-05T09:00:00Z",
   },
   {
     id: "featured-brand-designer-nomad",
@@ -22,8 +21,7 @@ export const jobs = [
     tags: ["Marketing", "Design"],
     description:
       "Nomad is looking for a Brand Designer to shape visual identity across product, campaigns, and web experiences. You will translate strategic ideas into polished design assets, maintain consistency across channels, and partner closely with marketing and leadership to grow brand recognition.",
-    isFeatured: true,
-    isLatest: false,
+    created_at: "2026-01-08T10:00:00Z",
   },
   {
     id: "featured-product-designer-dropbox",
@@ -35,8 +33,7 @@ export const jobs = [
     tags: ["Marketing", "Design"],
     description:
       "In this Product Designer role, you will design intuitive user flows and high-quality interfaces for core Dropbox experiences. You will run discovery with product managers, create prototypes, and apply feedback from research and analytics to improve usability and user outcomes.",
-    isFeatured: true,
-    isLatest: false,
+    created_at: "2026-01-12T11:00:00Z",
   },
   {
     id: "featured-interactive-developer-terraform",
@@ -48,8 +45,7 @@ export const jobs = [
     tags: ["Marketing", "Design"],
     description:
       "Terraform needs an Interactive Developer to build engaging front-end experiences and campaign microsites. You will develop responsive interfaces, integrate APIs, and ensure smooth performance across devices while working with design and content teams from concept to launch.",
-    isFeatured: true,
-    isLatest: false,
+    created_at: "2026-01-15T12:00:00Z",
   },
   {
     id: "latest-social-media-assistant-nomad",
@@ -61,8 +57,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "You will support social media planning, publishing, and community engagement across major channels. The role focuses on content scheduling, performance tracking, and close collaboration with the creative team to keep campaigns aligned with brand voice and growth goals.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-01T09:00:00Z",
   },
   {
     id: "latest-social-media-assistant-netlify",
@@ -74,8 +69,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "As a Social Media Assistant at Netlify, you will help produce and distribute social content, monitor audience conversations, and prepare weekly performance insights. You will collaborate with marketing stakeholders to improve campaign reach and engagement.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-03T09:30:00Z",
   },
   {
     id: "latest-brand-designer-dropbox",
@@ -87,8 +81,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "This Brand Designer position is focused on creating campaign concepts, marketing visuals, and digital brand experiences. You will work across teams to ensure consistent storytelling and deliver impactful visual assets for global audiences.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-06T10:00:00Z",
   },
   {
     id: "latest-brand-designer-maze",
@@ -100,8 +93,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "Maze is hiring a Brand Designer to craft high-quality creative assets for product marketing and communications. You will turn complex ideas into clear visuals, contribute to campaign direction, and evolve the brand system over time.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-10T10:30:00Z",
   },
   {
     id: "latest-interactive-developer-terraform",
@@ -113,8 +105,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "You will build interactive front-end modules for campaign and product pages, collaborating with designers and marketers to transform concepts into production-ready experiences. The role requires strong attention to performance, accessibility, and cross-browser compatibility.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-14T11:00:00Z",
   },
   {
     id: "latest-interactive-developer-udacity",
@@ -126,8 +117,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "Udacity is seeking an Interactive Developer to create engaging learning and marketing experiences on the web. You will implement reusable components, collaborate on UI interactions, and support rapid iteration based on user feedback and analytics.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-18T11:30:00Z",
   },
   {
     id: "latest-hr-manager-packer",
@@ -139,8 +129,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "As an HR Manager, you will lead hiring operations, employee relations, and people processes across teams. You will partner with leadership on workforce planning, improve recruitment pipelines, and ensure a strong employee experience.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-22T12:00:00Z",
   },
   {
     id: "latest-hr-manager-webflow",
@@ -152,8 +141,7 @@ export const jobs = [
     type: "Full-time",
     description:
       "Webflow is looking for an HR Manager to support talent operations, onboarding, performance processes, and internal programs. You will help shape people strategy while ensuring policies and workflows are effective and employee-centered.",
-    isFeatured: false,
-    isLatest: true,
+    created_at: "2026-02-26T12:30:00Z",
   },
 ];
 
