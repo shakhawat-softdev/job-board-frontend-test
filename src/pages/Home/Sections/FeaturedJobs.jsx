@@ -4,18 +4,19 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import gsap from "gsap";
-import { jobs } from "../../../data/jobs";
+import { useGetJobs } from "../../../hooks/useJobs";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-const featuredJobs = [...jobs]
-  .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
-  .slice(0, 4);
-
 const FeaturedJobs = () => {
+  const { data: jobs = [], isLoading, isError } = useGetJobs();
   const sectionRef = useRef();
+
+  const featuredJobs = [...jobs]
+    .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
+    .slice(0, 4);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -48,31 +49,47 @@ const FeaturedJobs = () => {
           </button>
         </div>
 
-        {/* Mobile View: Swiper Slider */}
-        <div className="block md:hidden">
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={20}
-            slidesPerView={1.2}
-            pagination={{ clickable: true }}
-            className="pb-12"
-          >
-            {featuredJobs.map((job) => (
-              <SwiperSlide key={job.id}>
-                <JobCard job={job} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {isLoading && (
+          <div className="flex items-center justify-center py-12">
+            <p className="text-slate-500">Loading featured jobs...</p>
+          </div>
+        )}
 
-        {/* Desktop View: Grid Layout */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredJobs.map((job) => (
-            <div key={job.id} className="job-card">
-              <JobCard job={job} />
+        {isError && (
+          <div className="flex items-center justify-center py-12">
+            <p className="text-red-500">Failed to load jobs</p>
+          </div>
+        )}
+
+        {!isLoading && !isError && featuredJobs.length > 0 && (
+          <>
+            {/* Mobile View: Swiper Slider */}
+            <div className="block md:hidden">
+              <Swiper
+                modules={[Pagination]}
+                spaceBetween={20}
+                slidesPerView={1.2}
+                pagination={{ clickable: true }}
+                className="pb-12"
+              >
+                {featuredJobs.map((job) => (
+                  <SwiperSlide key={job._id}>
+                    <JobCard job={job} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-          ))}
-        </div>
+
+            {/* Desktop View: Grid Layout */}
+            <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {featuredJobs.map((job) => (
+                <div key={job._id} className="job-card">
+                  <JobCard job={job} />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
       </div>
     </section>
@@ -82,7 +99,7 @@ const FeaturedJobs = () => {
 // Reusable Job Card Component
 const JobCard = ({ job }) => (
   <Link
-    to={`/jobs/${job.id}`}
+    to={`/jobs/${job._id}`}
     className="border border-slate-200 p-6 bg-white hover:border-[#4F46E5] transition-all duration-300 group cursor-pointer h-full block"
     style={{ borderRadius: "0px" }}
   >

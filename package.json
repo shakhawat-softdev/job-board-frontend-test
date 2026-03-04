@@ -12,8 +12,11 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.0.15",
+    "@tanstack/react-query": "^5.90.21",
     "framer-motion": "^12.5.0",
     "gsap": "^3.14.2",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
@@ -25,7 +28,9 @@
     "react-router-dom": "^7.4.0",
     "react-slick": "^0.30.3",
     "react-swipeable": "^7.0.2",
+    "react-toastify": "^11.0.5",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.26.21",
     "swiper": "^12.1.2",
     "tailwindcss": "^4.0.15"
   },
